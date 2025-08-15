@@ -13,20 +13,24 @@ public class CardapioBebida extends Cardapio implements AdicionarItem {
     }
 
     @Override
-    public void adicionarItem(Bebida bebida) {
-        bebidas.add(bebida);
-    }
-
-    @Override
-    public void adicionarItem(Object item) {
-    }
-
-    @Override
-    public void removerItem() {
+    public void removerItem(Object bebida) {
+        if (bebida instanceof Bebida) {
+            bebidas.remove((Bebida) bebida);
+        }
     }
 
     @Override
     public void listarItens() {
+        for (Bebida bebida : bebidas) {
+            System.out.println(bebida.getSabor() + " " + bebida.getTamanho() + " " + bebida.getTipo() + " " + bebida.getPreco());
+        }
+    }
+
+    @Override
+    public void adicionarItem(Object bebida) {
+        if (bebida instanceof Bebida) {
+            bebidas.add((Bebida) bebida);
+        }
     }
 
 }

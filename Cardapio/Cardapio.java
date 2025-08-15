@@ -1,7 +1,5 @@
 package Cardapio;
 
-import java.util.ArrayList;
-
 public class Cardapio {
     
     private String nome;
