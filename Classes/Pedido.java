@@ -1,7 +1,6 @@
 package Classes;
 
-import Cardapio.Bebida;
-import Cardapio.Pizza;
+import Interfaces.Item;
 
 public class Pedido {
 
@@ -9,10 +8,15 @@ public class Pedido {
     private String enderecoEntrega;
     private double precoTotal;
 
-    public Pedido(Cliente cliente, Pizza pizza, Bebida bebida) {
+    public Pedido(Cliente cliente, Item item1, Item item2) {
         nomeCliente = cliente.getNome();
         enderecoEntrega = cliente.getEndereco();
-        precoTotal = pizza.getPreco() + bebida.getPreco();
+        precoTotal = item1.getPreco() + item2.getPreco();
+    }
+
+    public void exibirPedido() {
+        System.out.println("Nome do Cliente: " + getNomeCliente() + " Endereço: " + getEnderecoEntrega() + " Preço Total: " + String.format("%.2f", getPrecoTotal()));
+
     }
 
     public String getNomeCliente() {

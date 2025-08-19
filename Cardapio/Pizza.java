@@ -1,6 +1,8 @@
 package Cardapio;
 
-public class Pizza {
+import Interfaces.Item;
+
+public class Pizza implements Item {
 
     private String sabor;
     private char tamanho;

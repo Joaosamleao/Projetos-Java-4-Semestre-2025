@@ -1,13 +1,15 @@
 package Cardapio;
 
-public class Bebida {
+import Interfaces.Item;
+
+public class Bebida implements Item {
 
     private String sabor;
-    private String tamanho;
+    private char tamanho;
     private String tipo;
     private double preco;
     
-    public Bebida (String sabor, String tamanho, String tipo, double preco) {
+    public Bebida (String sabor, char tamanho, String tipo, double preco) {
         this.sabor = sabor;
         this.tamanho = tamanho;
         this.tipo = tipo;
@@ -16,7 +18,7 @@ public class Bebida {
     public String getSabor() {
         return sabor;
     }
-    public String getTamanho() {
+    public char getTamanho() {
         return tamanho;
     }
     public String getTipo() {
@@ -28,7 +30,7 @@ public class Bebida {
     public void setSabor(String sabor) {
         this.sabor = sabor;
     }
-    public void setTamanho(String tamanho) {
+    public void setTamanho(char tamanho) {
         this.tamanho = tamanho;
     }
     public void setTipo(String tipo) {

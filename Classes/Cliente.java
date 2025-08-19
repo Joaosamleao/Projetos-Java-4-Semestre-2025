@@ -12,6 +12,10 @@ public class Cliente {
         this.telefone = telefone;
     }
 
+    public void exibirInformações() {
+        System.out.println("Nome: " + getNome() + " Endereço: " + getEndereco() + " Telefone: " + getTelefone());
+    }
+
     public String getEndereco() {
         return endereco;
     }
